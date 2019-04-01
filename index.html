@@ -573,7 +573,7 @@
           </div>
         </section>
 
-        <section>
+        <section class="bg-black">
           <!--.wrap = container (width: 90%) -->
           <div class="wrap aligncenter size-60">
             <h2>How to detect scrolling in js?</h2>
@@ -604,109 +604,68 @@
           <!-- .end .wrap -->
         </section>
 
-        <section>
+        <section class="bg-black">
           <!--.wrap = container (width: 90%) -->
           <div class="wrap aligncenter size-50">
-            <h3>
-              <a
-                href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API"
-                >new IntersectionObserver</a
+            <h3>new IntersectionObserver</h3>
+            <p>
+              <a href="https://codepen.io/avcoder/pen/vMEpzb"
+                >View slide scrolling in action using new way</a
               >
-            </h3>
-            <pre><code><h5>const options = { threshold: [0, 0.5, 1.0] } // off, half, and totally on
-
-const callback = (entries, observer) => {
-  entries.forEach(entry => {
-    // only using threshold of 1 here 
-    if (entry.isIntersecting && entry.intersectionRatio >= 1) {
-      entry.target.classList.add('visible'); // css will animate it in
+            </p>
+            <pre><code><h5>const callback = function(images, observer) {
+  images.forEach(image => {
+    // using a threshold of 0.5 to test if image is half visible
+    if (image.isIntersecting && image.intersectionRatio >= 0.5) {
+      image.target.classList.add('active');
     } else {
-      entry.target.classList.remove('visible');
+      image.target.classList.remove('active');
     }
-  });
+  })
 }
 
+const options = { threshold: [0, 0.5, 1.0] }   // off, half, visible
 const observer = new IntersectionObserver(callback, options);
 
-const boxes = document.querySelectorAll('.box');
-boxes.forEach(box => observer.observe(box));
-</h5></code></pre>
-          </div>
-          <!-- .end .wrap -->
-        </section>
-
-        <section>
-          <!--.wrap = container (width: 90%) -->
-          <div class="wrap aligncenter">
-            <h1>3D</h1>
-            <br />
-
-            <h2>
-              perspective
-            </h2>
-            <h2>
-              perspective-origin
-            </h2>
-            <h2>
-              transform: rotate3d();
-            </h2>
-          </div>
-          <!-- .end .wrap -->
-        </section>
-
-        <section>
-          <!--.wrap = container (width: 90%) -->
-          <div class="wrap aligncenter">
-            <h1>2D</h1>
-
-            <h2>
-              transform-origin;
-              <svg class="fa-dot-circle-o">
-                <use xlink:href="#fa-dot-circle-o"></use>
-              </svg>
-            </h2>
+const sliderImages = document.querySelectorAll('img');
+sliderImages.forEach(sliderImage => observer.observe(sliderImage));</h5></code></pre>
             <p>
               <a
-                href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-origin"
-                >MDN docs</a
+                href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API"
+                >see MDN</a
               >
             </p>
           </div>
           <!-- .end .wrap -->
         </section>
 
-        <section>
-          <!--.wrap = container (width: 90%) -->
-          <div class="wrap size-50 aligncenter">
-            <h2>
-              <strong>Summary:</strong>
-            </h2>
-            <br />
-            <div class="bg-white shadow">
-              <ul class="flexblock reasons">
-                <li>
-                  We experienced a web animation platform that enabled us to
-                  easily build motion-graphics-based interactive components
-                </li>
-                <li>
-                  Manipulated HTML elements based on a timeline
-                </li>
-                <li>
-                  We also observed the rather heavy (but standards-based and
-                  open) code that these tools produced.
-                </li>
-              </ul>
+
+        <section class="bg-apple">
+            <div class="wrap">
+              <div class="content-left">
+                <h3>
+                  Custom cursors
+                </h3>
+              </div>
+              <!-- end .content-left -->
+              <div class="content-left">
+                  <p class="codepen" data-height="500" data-theme-id="0" data-default-tab="result" data-user="avcoder" data-slug-hash="bJNvOO" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Creating Custom Cursors">
+                      <span>See the Pen <a href="https://codepen.io/avcoder/pen/bJNvOO/">
+                      Creating Custom Cursors</a> by A.V. (<a href="https://codepen.io/avcoder">@avcoder</a>)
+                      on <a href="https://codepen.io">CodePen</a>.</span>
+                    </p>
+                    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+              </div>
+              <!-- end .content-left -->
             </div>
-            <!-- .end .bg-white shadow -->
-          </div>
-          <!-- .end .wrap -->
-        </section>
+            <!-- .end .wrap -->
+          </section>
 
         <section class="bg-secondary">
           <!--.wrap = container (width: 90%) -->
           <div class="wrap size-50 frame">
             <h2 class="text-serif aligncenter">
-              Do in-class Exercise 9
+              Do in-class Exercise 14
               <br />until end of class
             </h2>
             <p class="aligncenter">
