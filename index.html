@@ -267,9 +267,9 @@
                   <p>Animate elements based on Webflow's timeline</p>
                 </li>
                 <li>
-                  <h2>Detect Scrolling</h2>
+                  <h2>Vanilla JS Tips</h2>
                   <p>
-                    How to detect scrolling using vanilla JS?
+                    How to detect scrolling using vanilla JS? and other tips
                   </p>
                 </li>
               </ul>
@@ -579,13 +579,11 @@
             <h2>How to detect scrolling in js?</h2>
 
             <p>
-              <a href="./js30.html"
+              <a href="https://codepen.io/avcoder/pen/JVoOWG"
                 >View slide scrolling in action using old way</a
               >
             </p>
-            <pre><code><h5>
-
-sliderImages.forEach(sliderImage => {
+            <pre><code><h5>sliderImages.forEach(sliderImage => {
 
   // half way through the image
   const slideInAt = (window.scrollY + window.innerHeight) - sliderImage.height / 2;
@@ -601,9 +599,7 @@ sliderImages.forEach(sliderImage => {
   } else {
     sliderImage.classList.remove('active');
   }
-});
-
-</h5></code></pre>
+});</h5></code></pre>
           </div>
           <!-- .end .wrap -->
         </section>
@@ -613,12 +609,11 @@ sliderImages.forEach(sliderImage => {
           <div class="wrap aligncenter size-50">
             <h3>
               <a
-                href="https://twitter.com/wesbos/status/915304495902535685?lang=en"
+                href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API"
                 >new IntersectionObserver</a
               >
             </h3>
-            <pre><code><h5>
-const options = { threshold: [0, 0.5, 1.0] } // off, half, and totally on
+            <pre><code><h5>const options = { threshold: [0, 0.5, 1.0] } // off, half, and totally on
 
 const callback = (entries, observer) => {
   entries.forEach(entry => {

@@ -124,3 +124,26 @@
 
 - this is what we'll be doing
 - show how each video corresponds to the section within webflow
+
+# detect scrolling in js
+
+- credit: Wes Bos JS30 exercise
+- show demo
+- there are 2 vanila JS ways - old vs new
+- old way: If image is half shown, and if image is not totally scrolled past it, then add class, otherwise remove it
+- how do you calculate half shown? (go thru calc)
+- so that's the low-level way to do this kind of thing
+- Demo it
+
+  - open new tab to google
+  - in console, create click Eye icon to create new live expression
+  - window.scrollY
+  - compare when there's a narrow window vs larger window - does max value change?
+  - window.innerHeight
+  - compare when there's a narrow window vs larger window - does max value change?
+
+# new intersection observer
+
+- however as of last year, there is a new way - IntersectionObserver browser API
+- click link to Wes Bos' tweet
+- read comments and try it
